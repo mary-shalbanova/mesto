@@ -5,33 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./pages/index.css" rel="stylesheet" />
     <title>Mesto</title>
-    <!-- можно на англ-->
     <script src="./index.js" defer></script>
   </head>
   <body class="page">
     <div class="page__container">
-      <header class="header header__content">
-        <img class="logo" src="./images/logo.png" alt="логотип" />
-        <div class="header__line"></div>
+      <!-- header -->
+      <header class="header page__header">
+        <img
+          class="header__logo"
+          src="./images/logo.svg"
+          alt="логотип"
+        />
       </header>
       <main class="page__content">
+        <!-- profile -->
         <section class="profile">
-          <div class="profile__content">
-            <img class="profile__avatar" src="" alt="аватар" />
-            <div class="profile__info">
-              <h1 class="profile__name">Жак-Ив Кусто</h1>
-              <p class="profile__occupation">Исследователь океана</p>
-              <button class="profile__edit-button">
-                <img class="profile__pen-icon" alt="иконка-карандаш" />
+          <img
+            class="profile__avatar"
+            src="./images/avatar.jpg"
+            alt="аватар"
+          />
+          <div class="profile__info">
+            <div class="profile__wrapper">
+              <h1 class="profile__name text-overflow"></h1>
+              <button class="profile__edit-button button fade">
+                <span class="sr-only">Редактировать</span>
               </button>
             </div>
+            <p class="profile__occupation"></p>
           </div>
-          <button class="profile__add-button">
-            <img class="profile__plus-icon" alt="иконка-плюс" />
+          <button class="profile__add-button button fade">
+            <span class="sr-only">Добавить</span>
           </button>
         </section>
+        <!-- elements -->
+        <section class="elements">
+          <ul class="cards">
+            <li class="cards__item">
+              <img
+                class="cards__image"
+                src="./images/Vladivostok.jpg"
+                alt="маяк"
+              />
+              <div class="cards__wrapper">
+                <p class="cards__text text-overflow">Владивосток</p>
+                <button class="cards__like-button button">
+                  <span class="sr-only">Поставить лайк</span>
+                </button>
+              </div>
+            </li>
+            <li class="cards__item">
+              <img
+                class="cards__image"
+                src="./images/Dagestan.jpg"
+                alt="Сулакский каньон"
+              />
+              <div class="cards__wrapper">
+                <p class="cards__text text-overflow">Дагестан</p>
+                <button class="cards__like-button button">
+                  <span class="sr-only">Поставить лайк</span>
+                </button>
+              </div>
+            </li>
+            <li class="cards__item">
+              <img
+                class="cards__image"
+                src="./images/Pereslavl.jpg"
+                alt="церковь"
+              />
+              <div class="cards__wrapper">
+                <p class="cards__text text-overflow">Переславль-Залесский</p>
+                <button class="cards__like-button button">
+                  <span class="sr-only">Поставить лайк</span>
+                </button>
+              </div>
+            </li>
+            <li class="cards__item">
+              <img
+                class="cards__image"
+                src="./images/Saint-Petersburg.jpg"
+                alt="двор-колодец"
+              />
+              <div class="cards__wrapper">
+                <p class="cards__text text-overflow">Санкт-Петербург</p>
+                <button class="cards__like-button button">
+                  <span class="sr-only">Поставить лайк</span>
+                </button>
+              </div>
+            </li>
+            <li class="cards__item">
+              <img
+                class="cards__image"
+                src="./images/Sochi.jpg"
+                alt="санаторий им.Орджоникидзе"
+              />
+              <div class="cards__wrapper">
+                <p class="cards__text text-overflow">Сочи</p>
+                <button class="cards__like-button button">
+                  <span class="sr-only">Поставить лайк</span>
+                </button>
+              </div>
+            </li>
+            <li class="cards__item">
+              <img
+                class="cards__image"
+                src="./images/Tyumen.jpg"
+                alt="памятник Ленину"
+              />
+              <div class="cards__wrapper">
+                <p class="cards__text text-overflow">Тюмень</p>
+                <button class="cards__like-button button">
+                  <span class="sr-only">Поставить лайк</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!-- popup -->
+        <section class="popup">
+          <div class="popup__container">
+            <button class="button popup__close-button fade">
+              <span class="sr-only">Закрыть</span>
+            </button>
+            <form class="form" name="edit-profile">
+              <h2 class="form__header">Редактировать профиль</h2>
+              <fieldset class="form__textfields">
+                <input
+                  class="form__input-field text-overflow"
+                  type="text"
+                  name="input-name"
+                />
+                <input
+                  class="form__input-field text-overflow"
+                  type="text"
+                  name="input-occupation"
+                />
+              </fieldset>
+              <button class="button form__submit-button">Сохранить</button>
+            </form>
+          </div>
+        </section>
       </main>
-      <footer class="page__content"></footer>
+      <!-- footer -->
+      <footer class="footer page__content">
+        <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
+      </footer>
     </div>
   </body>
 </html>
