@@ -4,13 +4,14 @@
   color: #ffffff;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 21.78px;
+  max-width: 336px;
 }
 
 @media (max-width: 380px) {
   .profile__occupation {
     font-size: 14px;
-    line-height: 1.21;
+    line-height: 16.94px;
     text-align: center;
   }
 }
