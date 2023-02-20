@@ -3,9 +3,9 @@ const popup = document.querySelector('.popup');
 const userNameElement = document.querySelector('.profile__name');
 const userOccupationElement = document.querySelector('.profile__occupation');
 const closePopupButton = document.querySelector('.popup__close-button');
-const formElement = document.querySelector('[name="edit-profile"]');
-const inputName = document.querySelector('[name="input-name"]');
-const inputOccupation = document.querySelector('[name="input-occupation"]');
+const formElement = document.querySelector('.form');
+const inputName = document.querySelector('.form__input-field_input_name');
+const inputOccupation = document.querySelector('.form__input-field_input_occupation');
 const submitButton = document.querySelector('.form__submit-button');
 
 function openPopup() {
@@ -29,4 +29,4 @@ editProfileButton.addEventListener('click', openPopup);
 
 closePopupButton.addEventListener('click', closePopup);
 
-submitButton.addEventListener('click', handleFormSubmit);
+formElement.addEventListener('submit', handleFormSubmit);
