@@ -1,0 +1,9 @@
+{
+  "javascript.format.enable": true,
+  "javascript.inlayHints.parameterTypes.enabled": false,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": false,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false
+}

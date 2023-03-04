@@ -1,8 +1,8 @@
 .page__header {
   margin: 0 auto;
-  margin-bottom: 36px;
+  margin-bottom: 41px;
   max-width: 880px;
-  padding: 45px 0 41px;
+  padding: 45px 0 36px;
 }
 
 @media (max-width: 380px) {

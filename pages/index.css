@@ -31,15 +31,22 @@
 @import url(../blocks/cards/__like-button/_active/cards__like-button_active.css);
 @import url(../blocks/cards/__text/cards__text.css);
 @import url(../blocks/cards/__wrapper/cards__wrapper.css);
+@import url(../blocks/cards/__delete-button/cards__delete-button.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup/_type/popup_type_image.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
+@import url(../blocks/popup/__close-button/_type/popup__close-button_type_image.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__header/popup__header.css);
+@import url(../blocks/popup/__image-wrapper/popup__image-wrapper.css);
+@import url(../blocks/popup/__figure/popup__figure.css);
+@import url(../blocks/popup/__image/popup__image.css);
+@import url(../blocks/popup/__image-text/popup__image-text.css);
 
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__input-field/form__input-field.css);
@@ -47,3 +54,5 @@
 @import url(../blocks/form/__textfields/form__textfields.css);
 
 @import url(../blocks/fade/fade.css);
+
+
