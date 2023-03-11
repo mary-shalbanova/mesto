@@ -9,6 +9,7 @@ const inputName = document.querySelector('.form__input-field_input_name');
 const inputOccupation = document.querySelector('.form__input-field_input_occupation');
 
 const addCardPopup = document.querySelector('.popup_type_add');
+const cardTemplate = document.querySelector('#card-template').content;
 const addCardCloseButton = addCardPopup.querySelector('.popup__close-button');
 const addCardButton = document.querySelector('.profile__add-button');
 const inputCardHeading = document.querySelector('.form__input-field_input_card-heading');
@@ -19,9 +20,10 @@ const cardsContainer = document.querySelector('.cards');
 
 const popupViewImage = document.querySelector('.popup_type_image');
 const viewImageCloseButton = popupViewImage.querySelector('.popup__close-button_type_image');
+const popupImage = popupViewImage.querySelector('.popup__image');
+const popupImageText = popupViewImage.querySelector('.popup__image-text');
 
 function createCard(card) {
-  const cardTemplate = document.querySelector('#card-template').content;
   const newCard = cardTemplate.querySelector('.cards__item').cloneNode(true);
   const cardName = newCard.querySelector('.cards__text');
   const cardImage = newCard.querySelector('.cards__image');
@@ -46,8 +48,6 @@ function handleDeleteButton(evt) {
 
 function openFullViewWindow(evt) {
   const image = evt.target;
-  const popupImage = document.querySelector('.popup__image');
-  const popupImageText = document.querySelector('.popup__image-text');
   const card = image.closest('.cards__item');
   const imageTitle = card.querySelector('.cards__text');
   popupImage.src = image.src;
@@ -107,6 +107,8 @@ editProfileCloseButton.addEventListener('click', function () {
 
 addCardButton.addEventListener('click', function () {
   openPopup(addCardPopup);
+  inputCardHeading.value = '';
+  inputCardLink.value = '';
 });
 
 addCardCloseButton.addEventListener('click', function () {
