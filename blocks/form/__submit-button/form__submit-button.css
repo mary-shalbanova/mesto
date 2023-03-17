@@ -21,6 +21,6 @@
   }
 }
 
-.form__submit-button:hover {
-  opacity: 0.8;
+.form__submit-button:disabled {
+  pointer-events: none;
 }

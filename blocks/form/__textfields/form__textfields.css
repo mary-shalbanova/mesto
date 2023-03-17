@@ -1,15 +1,13 @@
 .form__textfields {
-  padding: 47px 0 45px;
+  padding: 50px 0 12px;
   border: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 33px;
 }
 
 @media (max-width: 530px) {
   .form__textfields {
-    padding: 75px 0 45px;
-    gap: 31px;
+    padding: 75px 0 7px;
   }
 }

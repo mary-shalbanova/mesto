@@ -55,20 +55,28 @@
             aria-label="Закрыть"
           ></button>
           <h2 class="popup__header">Редактировать профиль</h2>
-          <form class="form" name="edit-profile">
+          <form class="form" name="edit-profile" novalidate>
             <fieldset class="form__textfields">
               <input
-                class="form__input-field form__input-field_input_name"
+                class="form__input form__input_type_name"
                 type="text"
-                name="input-name"
+                name="name"
                 placeholder="Имя"
+                required
+                minlength="2"
+                maxlength="40"
               />
+              <span class="form__error form__error_type_name"></span>
               <input
-                class="form__input-field form__input-field_input_occupation"
+                class="form__input form__input_type_occupation"
                 type="text"
-                name="input-occupation"
-                placeholder="Вид деятельности"
+                name="occupation"
+                placeholder="О себе"
+                required
+                minlength="2"
+                maxlength="200"
               />
+              <span class="form__error form__error_type_occupation"></span>
             </fieldset>
             <button type="submit" class="button form__submit-button">
               Сохранить
@@ -87,20 +95,26 @@
             aria-label="Закрыть"
           ></button>
           <h2 class="popup__header">Новое место</h2>
-          <form class="form" name="add-card">
+          <form class="form" name="add-card" novalidate>
             <fieldset class="form__textfields">
               <input
-                class="form__input-field form__input-field_input_card-heading"
+                class="form__input form__input_type_card-heading"
                 type="text"
-                name="input-card-heading"
+                name="heading"
                 placeholder="Название"
+                required
+                minlength="2"
+                maxlength="30"
               />
+              <span class="form__error form__error_type_heading"></span>
               <input
-                class="form__input-field form__input-field_input_card-link"
-                type="text"
-                name="input-card-link"
+                class="form__input form__input_type_card-link"
+                type="url"
+                name="link"
                 placeholder="Ссылка на картинку"
+                required
               />
+              <span class="form__error form__error_type_link"></span>
             </fieldset>
             <button type="submit" class="button form__submit-button">
               Сохранить

@@ -1,5 +1,5 @@
-.form__input-field {
-  padding: 0 0 9px;
+.form__input {
+  padding: 0 0 6px;
   box-sizing: border-box;
   width: 100%;
   border: 0;
@@ -9,14 +9,15 @@
   font-size: 14px;
   line-height: 16.94px;
   color: #000000;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 530px) {
-  .form__input-field {
+  .form__input {
     padding: 0 0 9px;
   }
 }
 
-.form__input-field:focus {
+.form__input:focus {
   outline: none;
 }
