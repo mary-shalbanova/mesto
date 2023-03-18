@@ -125,5 +125,5 @@ editProfileButton.addEventListener('click', function () {
 
 addCardButton.addEventListener('click', function () {
   openPopup(addCardPopup);
-  addCardPopup.querySelector('.form').reset();
+  addCardForm.reset();
 })
