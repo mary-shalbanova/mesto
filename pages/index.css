@@ -20,7 +20,6 @@
 
 @import url(../blocks/button/button.css);
 @import url(../blocks/text-overflow/text-overflow.css);
-@import url(../blocks/sr-only/sr-only.css);
 
 @import url(../blocks/elements/elements.css);
 
@@ -48,7 +47,6 @@
 @import url(../blocks/popup/__image/popup__image.css);
 @import url(../blocks/popup/__image-text/popup__image-text.css);
 
-@import url(../blocks/form/form.css);
 @import url(../blocks/form/__input/form__input.css);
 @import url(../blocks/form/__input/_type/form__input_type_error.css);
 @import url(../blocks/form/__submit-button/form__submit-button.css);
