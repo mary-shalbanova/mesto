@@ -1,4 +1,4 @@
-const initialCards = [
+export const initialCards = [
   {
     name: 'Владивосток',
     link: './images/Vladivostok.jpg',
@@ -30,3 +30,13 @@ const initialCards = [
     alt: 'Памятник В.В.Ленину',
   },
 ];
+
+export const validationConfig = {
+  formSelector: '.form',
+  inputSelector: '.form__input',
+  submitButtonSelector: '.form__submit-button',
+  inactiveButtonClass: 'form__submit-button_disabled',
+  inputErrorClass: 'form__input_type_error',
+  errorClassVisible: 'form__error_visible',
+  errorSelectorTemplate: '.form__error_type_',
+}
