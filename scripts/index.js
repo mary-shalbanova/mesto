@@ -76,12 +76,12 @@ function addNewCard(evt) {
 
 function createCard(card) {
   const newCard = new Card(card, '#card-template', handleCardClick);
-  return newCard;
+  return newCard.generateCard();
 }
 
 function insertNewCard(card) {
   const cardElement = createCard(card);
-  cardsContainer.prepend(cardElement.generateCard());
+  cardsContainer.prepend(cardElement);
 }
 
 initialCards.forEach((card) => {
@@ -104,13 +104,17 @@ function submitEditProfileForm(evt) {
 editProfileForm.addEventListener('submit', submitEditProfileForm);
 addCardForm.addEventListener('submit', addNewCard);
 
-editProfileButton.addEventListener('click', function () {
+editProfileButton.addEventListener('click', () => {
+  const form = new FormValidator(editProfileForm, validationConfig);
+  form.resetValidation();
   openPopup(editProfilePopup);
   inputName.value = userNameElement.textContent;
   inputOccupation.value = userOccupationElement.textContent;
 });
 
-addCardButton.addEventListener('click', function () {
+addCardButton.addEventListener('click', () => {
+  const form = new FormValidator(addCardForm, validationConfig);
+  form.resetValidation();
   openPopup(addCardPopup);
   addCardForm.reset();
 });
