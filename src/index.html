@@ -3,20 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./pages/index.css" rel="stylesheet" />
     <title>Mesto</title>
-    <script type="module" src="./scripts/index.js" defer></script>
   </head>
   <body class="page">
     <div class="page__container">
       <!-- header -->
       <header class="header page__header">
-        <img class="header__logo" src="./images/logo.svg" alt="логотип" />
+        <img
+          class="header__logo"
+          src="<%=require('./images/logo.svg')%>"
+          alt="логотип"
+        />
       </header>
       <main class="page__content">
         <!-- profile -->
         <section class="profile">
-          <img class="profile__avatar" src="./images/avatar.jpg" alt="аватар" />
+          <img class="profile__avatar" src="<%=require('./images/avatar.jpg')%>" alt="аватар" />
           <div class="profile__info">
             <div class="profile__wrapper">
               <h1 class="profile__name text-overflow">Жак-Ив Кусто</h1>
@@ -53,7 +55,11 @@
             aria-label="Закрыть"
           ></button>
           <h2 class="popup__header">Редактировать профиль</h2>
-          <form class="form form_type_edit-profile" name="edit-profile" novalidate>
+          <form
+            class="form form_type_edit-profile"
+            name="edit-profile"
+            novalidate
+          >
             <fieldset class="form__textfields">
               <input
                 class="form__input form__input_type_name"
