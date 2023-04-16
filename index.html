@@ -53,7 +53,7 @@
             aria-label="Закрыть"
           ></button>
           <h2 class="popup__header">Редактировать профиль</h2>
-          <form class="form" name="edit-profile" novalidate>
+          <form class="form form_type_edit-profile" name="edit-profile" novalidate>
             <fieldset class="form__textfields">
               <input
                 class="form__input form__input_type_name"
@@ -93,18 +93,18 @@
             aria-label="Закрыть"
           ></button>
           <h2 class="popup__header">Новое место</h2>
-          <form class="form" name="add-card" novalidate>
+          <form class="form form_type_add-card" name="add-card" novalidate>
             <fieldset class="form__textfields">
               <input
                 class="form__input form__input_type_card-heading"
                 type="text"
-                name="heading"
+                name="name"
                 placeholder="Название"
                 required
                 minlength="2"
                 maxlength="30"
               />
-              <span class="form__error form__error_type_heading"></span>
+              <span class="form__error form__error_type_name"></span>
               <input
                 class="form__input form__input_type_card-link"
                 type="url"
