@@ -41,4 +41,4 @@ export const addCardButton = document.querySelector('.profile__add-button');
 export const editProfileButton = document.querySelector('.profile__edit-button');
 export const inputName = document.querySelector('.form__input_type_name');
 export const inputOccupation = document.querySelector('.form__input_type_occupation');
-export const formList = Array.from(document.querySelectorAll('.form'));
+

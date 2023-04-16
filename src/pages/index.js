@@ -1,4 +1,4 @@
-import '../pages/index.css';
+import './index.css';
 import {
   initialCards,
   validationConfig,
@@ -8,28 +8,25 @@ import {
   editProfileButton,
   inputName,
   inputOccupation,
-  formList,
-} from './constants.js';
-import Card from './Card.js';
-import FormValidator from './FormValidator.js';
-import Section from './Section.js';
-import PopupWithImage from './PopupWithImage.js';
-import PopupWithForm from './PopupWithForm.js';
-import UserInfo from './UserInfo.js';
+} from '../scripts/constants.js';
+import Card from '../scripts/components/Card.js';
+import FormValidator from '../scripts/components/FormValidator.js';
+import Section from '../scripts/components/Section.js';
+import PopupWithImage from '../scripts/components/PopupWithImage.js';
+import PopupWithForm from '../scripts/components/PopupWithForm.js';
+import UserInfo from '../scripts/components/UserInfo.js';
 
-formList.forEach((form) => {
-  const formValidator = new FormValidator(form, validationConfig);
-  formValidator.enableValidation();
-});
+const profileForm = new FormValidator(editProfileForm, validationConfig);
+profileForm.enableValidation();
+
+const cardForm = new FormValidator(addCardForm, validationConfig);
+cardForm.enableValidation();
+
+const popupFullViewImage = new PopupWithImage('.popup_type_image');
+popupFullViewImage.setEventListeners();
 
 function handleCardClick(cardName, cardLink) {
-  const popupFullViewImage = new PopupWithImage(
-    '.popup_type_image',
-    cardName,
-    cardLink
-  );
-  popupFullViewImage.open();
-  popupFullViewImage.setEventListeners();
+  popupFullViewImage.open(cardLink, cardName);
 }
 
 function rendererCard(item) {
@@ -60,8 +57,8 @@ function addNewCard(formData) {
 const formEditProfile = new PopupWithForm('.popup_type_edit', editProfileInfo);
 formEditProfile.setEventListeners();
 
+
 editProfileButton.addEventListener('click', () => {
-  const profileForm = new FormValidator(editProfileForm, validationConfig);
   profileForm.resetValidation();
   formEditProfile.open();
   const userInfo = user.getUserInfo();
@@ -73,7 +70,6 @@ const formAddCard = new PopupWithForm('.popup_type_add', addNewCard);
 formAddCard.setEventListeners();
 
 addCardButton.addEventListener('click', () => {
-  const cardForm = new FormValidator(addCardForm, validationConfig);
   cardForm.resetValidation();
   formAddCard.open();
 });
