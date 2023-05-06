@@ -18,17 +18,23 @@
       <main class="page__content">
         <!-- profile -->
         <section class="profile">
-          <img class="profile__avatar" src="<%=require('./images/avatar.jpg')%>" alt="аватар" />
+          <div class="profile__edit-avatar">
+            <img
+              class="profile__avatar"
+              src="#"
+              alt="аватар"
+            />
+          </div>
           <div class="profile__info">
             <div class="profile__wrapper">
-              <h1 class="profile__name text-overflow">Жак-Ив Кусто</h1>
+              <h1 class="profile__name text-overflow"></h1>
               <button
                 type="button"
                 class="profile__edit-button button fade"
                 aria-label="Редактировать"
               ></button>
             </div>
-            <p class="profile__occupation text-overflow">Исследователь океана</p>
+            <p class="profile__occupation text-overflow"></p>
           </div>
           <button
             type="button"
@@ -72,19 +78,17 @@
               />
               <span class="form__error form__error_type_name"></span>
               <input
-                class="form__input form__input_type_occupation"
+                class="form__input form__input_type_about"
                 type="text"
-                name="occupation"
+                name="about"
                 placeholder="О себе"
                 required
                 minlength="2"
                 maxlength="200"
               />
-              <span class="form__error form__error_type_occupation"></span>
+              <span class="form__error form__error_type_about"></span>
             </fieldset>
-            <button type="submit" class="button form__submit-button">
-              Сохранить
-            </button>
+            <button type="submit" class="button form__submit-button">Сохранить</button>
           </form>
         </div>
       </section>
@@ -120,9 +124,7 @@
               />
               <span class="form__error form__error_type_link"></span>
             </fieldset>
-            <button type="submit" class="button form__submit-button">
-              Сохранить
-            </button>
+            <button type="submit" class="button form__submit-button">Сохранить</button>
           </form>
         </div>
       </section>
@@ -142,6 +144,57 @@
         </div>
       </section>
 
+      <!-- delete-card-popup-->
+
+      <section class="popup popup_type_delete">
+        <div class="popup__container">
+          <button
+            type="button"
+            class="button popup__close-button fade"
+            aria-label="Закрыть"
+          ></button>
+          <h2 class="popup__header">Вы уверены?</h2>
+          <form
+            class="form form_type_delete-card"
+            name="delete-card"
+            novalidate
+          >
+            <button
+              type="submit"
+              class="button form__submit-button form__submit-button_type_delete"
+            >
+              Да
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- change-avatar-popup -->
+
+      <section class="popup popup_type_change-avatar">
+        <div class="popup__container">
+          <button
+            type="button"
+            class="button popup__close-button fade"
+            aria-label="Закрыть"
+          ></button>
+          <h2 class="popup__header">Обновить аватар</h2>
+          <form class="form form_type_change-avatar" name="change-avatar" novalidate>
+            <fieldset class="form__textfields">
+              <input
+                class="form__input form__input_type_link"
+                type="url"
+                name="link"
+                placeholder="Ссылка на картинку"
+                required
+              />
+              <span class="form__error form__error_type_link"></span>
+            </fieldset>
+            <button type="submit" class="button form__submit-button">Сохранить</button>
+          </form>
+        </div>
+      </section>
+
       <!-- template -->
 
       <template id="card-template">
@@ -154,11 +207,14 @@
           ></button>
           <div class="cards__wrapper">
             <h2 class="cards__text text-overflow"></h2>
-            <button
-              type="button"
-              class="cards__like-button button"
-              aria-label="Нравится"
-            ></button>
+            <div class="cards__like-container">
+              <button
+                type="button"
+                class="cards__like-button button"
+                aria-label="Нравится"
+              ></button>
+              <span class="cards__like-counter"></span>
+            </div>
           </div>
         </li>
       </template>
