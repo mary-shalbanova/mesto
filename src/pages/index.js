@@ -139,13 +139,13 @@ function editProfileInfo(formData) {
     .editProfileInfo(formData)
     .then((data) => {
       user.setUserInfo(data);
+      formEditProfile.close();
     })
     .catch((err) => {
       console.error(err);
     })
     .finally(() => {
       formEditProfile.renderLoading(false);
-      formEditProfile.close();
     });
 }
 
@@ -166,13 +166,13 @@ function addNewCard(formData) {
     .addNewCard(formData)
     .then((data) => {
       rendererCard(data);
+      formAddCard.close();
     })
     .catch((err) => {
       console.error(err);
     })
     .finally(() => {
       formAddCard.renderLoading(false);
-      formAddCard.close();
     });
 }
 
@@ -190,13 +190,13 @@ function changeAvatar(image) {
     .changeAvatar(image.link)
     .then((data) => {
       avatarImage.src = data.avatar;
+      formChangeAvatar.close();
     })
     .catch((err) => {
       console.error(err);
     })
     .finally(() => {
       formChangeAvatar.renderLoading(false);
-      formChangeAvatar.close();
     });
 }
 
